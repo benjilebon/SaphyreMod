@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "saphyre:items/saphyre_item"
+    "layer0": "saphyre:items/enhanced_saphyre"
   }
 }

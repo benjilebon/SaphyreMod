@@ -1,2 +1,12 @@
-item.saphyre_item.name=Saphyre
+item.saphyre_ingot.name=Saphyre
 tile.saphyre_ore.name=Saphyre Ore
+item.saphyre.name=Saphyre
+item.saphyre.description=A shiny piece
+item.enhanced_saphyre.name=§9Enhanced Saphyre§r
+item.enhanced_saphyre.description=Even brighter !
+item.amazing_saphyre.name=§2Amazing Saphyre§r
+item.amazing_saphyre.description=Wow !
+item.incredible_saphyre.name=§dIncredible Saphyre§r
+item.incredible_saphyre.description=UwU
+item.ultimate_saphyre.name=§6Ultimate Saphyre§r
+item.ultimate_saphyre.description=WOOOOOOF

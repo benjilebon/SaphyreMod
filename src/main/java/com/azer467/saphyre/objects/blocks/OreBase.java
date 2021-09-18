@@ -4,16 +4,11 @@ import com.azer467.saphyre.init.ItemInit;
 import com.azer467.saphyre.util.interfaces.IHasModel;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.Random;
 
 public class OreBase extends BlockBase implements IHasModel {
 
