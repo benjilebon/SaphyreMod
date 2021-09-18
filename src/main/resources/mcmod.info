@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "modid": "saphyre",
+  "name": "Saphyre",
+  "description": "The shiny and mysterious saphyre..",
+  "version": "0.1",
+  "mcversion": "1.12.2",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Aze", "Winigan"],
+  "credits": "Aze (azer467), Winigan, Elodias92 for having the best dog on earth",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

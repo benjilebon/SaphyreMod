@@ -12,6 +12,9 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
+//TODO: JEI Integration
+//TODO: Item right click trigger
+
 @Mod(modid = SaphyreMetadata.MODID, name = SaphyreMetadata.NAME, version = SaphyreMetadata.VERSION)
 public class SaphyreMain
 {
