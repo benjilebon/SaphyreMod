@@ -50,6 +50,6 @@ public class RegistryHandler
 
     public static void initRegistries()
     {
-
+        RecipesHandler.registerRecipes();
     }
 }

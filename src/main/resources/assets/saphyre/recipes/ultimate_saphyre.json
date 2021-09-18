@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "is_mod_present",
+      "mod": "saphyre"
+    }
+  ],
+  "pattern": [
+    "E#E",
+    "PQP",
+    "E#E"
+  ],
+  "key": {
+    "#": {
+      "item": "saphyre:incredible_saphyre"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "P": {
+      "item": "saphyre:amazing_saphyre"
+    },
+    "Q": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "minecraft:ultimate_saphyre",
+    "count": 1
+  }
+}

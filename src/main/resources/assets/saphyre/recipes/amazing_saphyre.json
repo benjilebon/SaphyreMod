@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "is_mod_present",
+      "mod": "saphyre"
+    }
+  ],
+  "pattern": [
+    "#C#",
+    "SLS",
+    "#C#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_block"
+    },
+    "C": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "S": {
+      "item": "saphyre:enhanced_saphyre"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "result": {
+    "item": "saphyre:amazing_saphyre",
+    "count": 1
+  }
+}

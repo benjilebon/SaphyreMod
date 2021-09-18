@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "is_mod_present",
+      "mod": "saphyre"
+    }
+  ],
+  "pattern": [
+    "gSg",
+    "ALA",
+    "gSg"
+  ],
+  "key": {
+    "g": {
+      "item": "minecraft:gold_ingot"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "A": {
+      "item": "saphyre:saphyre"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "result": {
+    "item": "saphyre:enhanced_saphyre",
+    "count": 1
+  }
+}

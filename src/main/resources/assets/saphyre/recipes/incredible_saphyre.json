@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "is_mod_present",
+      "mod": "saphyre"
+    }
+  ],
+  "pattern": [
+    "#E#",
+    "SLS",
+    "#E#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "E": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "saphyre:amazing_saphyre"
+    },
+    "L": {
+      "item": "minecraft:lapis_block"
+    }
+  },
+  "result": {
+    "item": "saphyre:incredible_saphyre",
+    "count": 1
+  }
+}
