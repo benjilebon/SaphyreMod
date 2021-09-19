@@ -2,6 +2,9 @@ package com.azer467.saphyre.util.handlers;
 
 import com.azer467.saphyre.init.BlockInit;
 import com.azer467.saphyre.init.ItemInit;
+import com.azer467.saphyre.network.NetworkMessage;
+import com.azer467.saphyre.network.NetworkPacketsInstance;
+import com.azer467.saphyre.network.handlers.MessageHandler;
 import com.azer467.saphyre.util.interfaces.IHasModel;
 import com.azer467.saphyre.world.generation.WorldGenSaphyreOres;
 import net.minecraft.block.Block;
@@ -11,6 +14,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
 
 @EventBusSubscriber
 public class RegistryHandler
@@ -45,6 +49,7 @@ public class RegistryHandler
 
     public static void preInitRegistries()
     {
+        NetworkPacketsInstance.NETWORK_SERVER_INSTANCE.registerMessage(MessageHandler.class, NetworkMessage.class, 0,Side.CLIENT);
         GameRegistry.registerWorldGenerator(new WorldGenSaphyreOres(), 0);
     }
 

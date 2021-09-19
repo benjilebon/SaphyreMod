@@ -10,3 +10,6 @@ item.incredible_saphyre.name=§dIncredible Saphyre§r
 item.incredible_saphyre.description=UwU
 item.ultimate_saphyre.name=§6Ultimate Saphyre§r
 item.ultimate_saphyre.description=WOOOOOOF
+message.gifting.serverError=Woops ! The Saphyre dev sucks and an internal error occurred...
+message.gifting.item.noSpaceInInventory=I wanted to give you a gift, but you can't carry it...
+message.gifting.item.success=You got gifted : x%d %s
