@@ -80,6 +80,8 @@ processResources {
     }
 }
 
+sourceSets {main { output.resourcesDir = output.classesDir }}
+
 repositories {
     maven {
         // location of the maven that hosts JEI files
