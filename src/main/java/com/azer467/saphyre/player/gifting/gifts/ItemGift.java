@@ -29,6 +29,7 @@ public class ItemGift implements IGiftBase, Serializable {
     }
 
     public boolean executeHandler(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+        ItemStack triggerItemSource = playerIn.getHeldItem(handIn);
         if (!worldIn.isRemote) {
             final Item item = Item.REGISTRY.getObject(new ResourceLocation(this.itemId));
             if (item == null) {
@@ -41,6 +42,7 @@ public class ItemGift implements IGiftBase, Serializable {
                 sendResultToClient(playerIn, "message.gifting.item.noSpaceInInventory");
                 return false;
             } else {
+                triggerItemSource.setCount(triggerItemSource.getCount() - 1);
                 sendResultToClient(playerIn, "message.gifting.item.success");
                 return true;
             }
