@@ -28,14 +28,14 @@ public class NetworkMessage<T extends IGiftBase> implements IMessage {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void fromBytes(ByteBuf buf) {
         byte[] b = new byte[buf.readableBytes()];
         buf.readBytes(b);
         ByteArrayInputStream bis = new ByteArrayInputStream(b);
         try {
             ObjectInput in = new ObjectInputStream(bis);
-            @SuppressWarnings("unchecked")
-            IGiftBase giftInstance = (T) in.readObject();
+            giftInstance = (T) in.readObject();
         } catch (IOException | ClassNotFoundException ignored) {
         }
     }
