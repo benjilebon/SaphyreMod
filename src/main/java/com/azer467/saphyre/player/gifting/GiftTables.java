@@ -12,23 +12,21 @@ public class GiftTables {
     private static GiftTables INSTANCE = new GiftTables();
 
     private GiftTables() {
-        dropList = new ProbabilityList(new ArrayList<IGiftBase>() {{
-            add(new ItemGift("minecraft:diamond", 1, 1));
-            add(new ItemGift("minecraft:gold_ingot", 1, 1));
-            add(new ItemGift("saphyre:non_existant", 1, 1));
-        }});
-        enhancedDropList = new ProbabilityList(new ArrayList<IGiftBase>() {{
-            add(new ItemGift("minecraft:diamond", 1, 1));
-        }});
-        amazingDropList = new ProbabilityList(new ArrayList<IGiftBase>() {{
-            add(new ItemGift("minecraft:diamond", 1, 1));
-        }});
-        incredibleDropList = new ProbabilityList(new ArrayList<IGiftBase>() {{
-            add(new ItemGift("minecraft:diamond", 1, 1));
-        }});
-        ultimateDropList = new ProbabilityList(new ArrayList<IGiftBase>() {{
-            add(new ItemGift("minecraft:diamond", 1, 1));
-        }});
+        dropList = new ProbabilityList(new ArrayList<>())
+                .addToList(new ItemGift("minecraft:diamond", 1, 1))
+                .addToList(new ItemGift("minecraft:gold_ingot", 1, 1));
+
+        enhancedDropList = new ProbabilityList(new ArrayList<>())
+                .addToList(new ItemGift("minecraft:diamond", 1, 1));
+
+        amazingDropList = new ProbabilityList(new ArrayList<>())
+                .addToList(new ItemGift("minecraft:diamond", 1, 1));
+
+        incredibleDropList = new ProbabilityList(new ArrayList<>())
+                .addToList(new ItemGift("minecraft:diamond", 1, 1));
+
+        ultimateDropList = new ProbabilityList(new ArrayList<>())
+                .addToList(new ItemGift("minecraft:diamond", 1, 1));
     }
 
     public static GiftTables getInstance() {

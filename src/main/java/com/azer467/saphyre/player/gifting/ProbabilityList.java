@@ -14,6 +14,12 @@ public class ProbabilityList {
         giftList.forEach(gift -> sumProb += gift.getProbability());
     }
 
+    public ProbabilityList addToList(IGiftBase element) {
+        giftList.add(element);
+        sumProb += element.getProbability();
+        return this;
+    }
+
     public IGiftBase sample(){
         double prob = rand.nextDouble() * sumProb;
         int i;
