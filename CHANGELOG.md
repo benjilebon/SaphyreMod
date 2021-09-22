@@ -5,6 +5,7 @@
 ### Added
 
 - Ingot smelting
+- Drop lists handling in gifting items
 
 ### Changed
 
