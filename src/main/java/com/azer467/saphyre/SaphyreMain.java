@@ -11,8 +11,13 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-//TODO: JEI Integration
-//TODO: Item right click trigger
+//TODO: Readme
+//TODO: Creative tab
+//TODO: Config integration
+//TODO: Textures
+//TODO: Add items drop
+//TODO: Achievements
+//TODO: Add items (drop loots etc.)
 
 @Mod(modid = SaphyreMetadata.MODID, name = SaphyreMetadata.NAME, version = SaphyreMetadata.VERSION)
 public class SaphyreMain
