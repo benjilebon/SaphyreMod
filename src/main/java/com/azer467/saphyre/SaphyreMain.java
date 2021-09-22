@@ -15,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 
 //TODO: Config integration
 //TODO: Textures
-//TODO: Add items drop
+//TODO: Items Drops (common/rare tables etc.)
 //TODO: Achievements
 //TODO: Add items (drop loots etc.)
 
