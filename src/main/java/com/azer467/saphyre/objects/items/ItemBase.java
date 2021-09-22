@@ -22,7 +22,7 @@ public class ItemBase extends Item implements IHasModel
     {
         setUnlocalizedName(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.MISC);
+        setCreativeTab(SaphyreMain.SAPHYRE_TAB);
         ItemInit.ITEMS.add(this);
     }
 

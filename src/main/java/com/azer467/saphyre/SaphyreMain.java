@@ -1,7 +1,9 @@
 package com.azer467.saphyre;
 
+import com.azer467.saphyre.gui.tabs.SaphyreTab;
 import com.azer467.saphyre.proxy.CommonProxy;
 import com.azer467.saphyre.util.handlers.RegistryHandler;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -11,7 +13,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-//TODO: Creative tab
 //TODO: Config integration
 //TODO: Textures
 //TODO: Add items drop
@@ -25,6 +26,8 @@ public class SaphyreMain
 
     @Instance
     public static SaphyreMain instance;
+
+    public static CreativeTabs SAPHYRE_TAB = new SaphyreTab("saphyre");
 
     @SidedProxy(clientSide = SaphyreMetadata.CLIENT,  serverSide = SaphyreMetadata.COMMON)
     public static CommonProxy proxy;

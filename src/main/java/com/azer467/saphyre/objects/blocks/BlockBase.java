@@ -17,7 +17,7 @@ public class BlockBase extends Block implements IHasModel {
         super(material);
         setUnlocalizedName(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.MISC);
+        setCreativeTab(SaphyreMain.SAPHYRE_TAB);
         setHardness(hardness);
         BlockInit.BLOCKS.add(this);
         ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(name));
