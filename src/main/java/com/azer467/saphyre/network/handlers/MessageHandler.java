@@ -50,9 +50,7 @@ public class MessageHandler implements IMessageHandler<NetworkMessage, IMessage>
         return I18n.format(
                 itemGift.getChatMessage(),
                 itemGift.getCount(),
-                Objects.requireNonNull(Item.REGISTRY.getObject(
-                        new ResourceLocation(itemGift.getItemId())
-                )).getDefaultInstance().getDisplayName()
+                itemGift.getSelectedItemDisplayName()
         );
     }
 }

@@ -10,6 +10,11 @@
 ### Changed
 
 - Removed anonymous classes initialization on drop lists
+- Give item variants when possible
+
+### Fixed
+
+- Fixed inventory full gift still consuming the item while not giving anything
 
 ## [0.1.0] - 20/09/2021
 
