@@ -2,14 +2,14 @@
 
 Each version has its own version that follows isolated versioning pattern with the following format :
 
-`MAJOR.MINOR.PATCH-MC_VERSION`
+`MAJOR.MINOR.PATCH-MC_VERSION-API`
 
 When a version is ported to a new game release, it starts from the preceding version major.minor numbers
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 
-## [0.2.0-112] - UNRELEASED
+## [0.2.0-112-FORGE] - UNRELEASED
 
 ### Added
 
@@ -25,7 +25,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
 - Fixed inventory full gift still consuming the item while not giving anything
 
-## [0.1.0-112] - 20/09/2021
+## [0.1.0-112-FORGE] - 20/09/2021
 
 ### Added
 
