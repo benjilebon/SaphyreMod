@@ -15,16 +15,17 @@ public class GiftTables {
     private Random rand;
 
     private GiftTables() {
+        rand = new Random();
         dropList = new ProbabilityList(new ArrayList<>());
         addCommonLoots(dropList, 1.0f);
         addRareLoots(dropList, 1.0f);
 
         enhancedDropList = new ProbabilityList(new ArrayList<>());
-        addCommonLoots(enhancedDropList, 2.0f);
+        addCommonLoots(enhancedDropList, 4.0f);
         addRareLoots(enhancedDropList, 1.5f);
 
         amazingDropList = new ProbabilityList(new ArrayList<>());
-        addCommonLoots(amazingDropList, 3.5f);
+        addCommonLoots(amazingDropList, 8.0f);
         addRareLoots(amazingDropList, 2.0f);
 
         incredibleDropList = new ProbabilityList(new ArrayList<>());
@@ -45,7 +46,6 @@ public class GiftTables {
     }
 
     private void addCommonLoots(ProbabilityList list, float rarityLevel) {
-        rand = new Random();
         list.addToList(new ItemGift("minecraft:dirt", rand(1, 3), 80 / rarityLevel))
                 .addToList(new ItemGift("minecraft:cobblestone", rand(1, 2), 60 / rarityLevel))
                 .addToList(new ItemGift("minecraft:rotten_flesh", rand(1, 3), 50 / rarityLevel))
