@@ -8,6 +8,11 @@ When a version is ported to a new game release, it starts from the preceding ver
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
+## [0.3.0-118-FORGE] - UNRELEASED
+
+### Added
+
+- Port to Minecraft 1.18.2
 
 ## [0.2.0-112-FORGE] - UNRELEASED
 

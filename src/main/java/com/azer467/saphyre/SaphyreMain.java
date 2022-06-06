@@ -1,17 +1,28 @@
 package com.azer467.saphyre;
 
-import com.azer467.saphyre.gui.tabs.SaphyreTab;
-import com.azer467.saphyre.proxy.CommonProxy;
-import com.azer467.saphyre.util.handlers.RegistryHandler;
-import net.minecraft.creativetab.CreativeTabs;
+import com.azer467.saphyre.core.world.OreGeneration;
+import com.azer467.saphyre.init.BlockInit;
+import com.azer467.saphyre.init.ItemInit;
+import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import org.apache.logging.log4j.Logger;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.jetbrains.annotations.NotNull;
+import org.slf4j.Logger;
+
+// PORT TO 1.18.2
+
+//TODO: Add missing items
+//TODO: Re-add gifting system
+//TODO: Re-add network stack
+//TODO: Verify resources
+//TODO: Fix Saphyre Ore no drops
+
+/////////////////
 
 //TODO: Config integration
 //TODO: Textures
@@ -19,39 +30,45 @@ import org.apache.logging.log4j.Logger;
 //TODO: Achievements
 //TODO: Add items (drop loots etc.)
 
-@Mod(modid = SaphyreMetadata.MODID, name = SaphyreMetadata.NAME, version = SaphyreMetadata.VERSION)
+@Mod(SaphyreMetadata.MODID)
 public class SaphyreMain
 {
-    private static Logger logger;
+    private static final Logger LOGGER = LogUtils.getLogger();
 
-    @Instance
-    public static SaphyreMain instance;
-
-    public static CreativeTabs SAPHYRE_TAB = new SaphyreTab("saphyre");
-
-    @SidedProxy(clientSide = SaphyreMetadata.CLIENT,  serverSide = SaphyreMetadata.COMMON)
-    public static CommonProxy proxy;
-
-    @EventHandler
-    public void preInit(FMLPreInitializationEvent event)
+    public SaphyreMain()
     {
-        logger = event.getModLog();
-        logger.info("Proxy Pre-initializing");
-        proxy.preInit();
-        logger.info("Registering Saphyre's World Ore Generator");
-        RegistryHandler.preInitRegistries();
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        bus.addListener(this::setup);
+
+        BlockInit.BLOCKS.register(bus);
+        ItemInit.ITEMS.register(bus);
+
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
-    @EventHandler
-    public void init(FMLInitializationEvent event)
+    // TODO: Move to separated file
+    public static final CreativeModeTab SAPHYRE_TAB = new CreativeModeTab(SaphyreMetadata.NAME) {
+        @Override
+        public @NotNull ItemStack makeIcon() {
+            return ItemInit.SAPHYRE_ORE.get().getDefaultInstance();
+        }
+    };
+
+    public void setup(final FMLCommonSetupEvent event) // =<<<<<<<<<<<<
     {
-        logger.info("Registering recipes");
-        RegistryHandler.initRegistries();
+        LOGGER.info("Proxy Pre-initializing");
+        LOGGER.info("Registering Saphyre's World Ore Generator");
+        event.enqueueWork(OreGeneration::registerOresGeneration);
     }
 
-    @EventHandler
-    public void postInit(FMLPostInitializationEvent event)
-    {
-        logger.info("WOOF !");
-    }
+//    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+//    public static class RegistryEvents
+//    {
+//        @SubscribeEvent
+//        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
+//        {
+//            LOGGER.info("Registering recipes");
+//        }
+//    }
 }

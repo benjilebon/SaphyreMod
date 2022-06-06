@@ -1,0 +1,20 @@
+modLoader="javafml" #mandatory
+loaderVersion="[40,)"
+license="All rights reserved"
+issueTrackerURL="https://github.com/benjilebon/SaphyreMod/issues"
+[[mods]] #mandatory
+modId="saphyre"
+version="${file.jarVersion}"
+displayName="Saphyre"
+#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+#logoFile="examplemod.png" #optional
+credits="Aze (azer467), Winigan, Elodias92 for having the best dog on earth" #optional
+authors="Aze, Winigan"
+description='The shiny and mysterious saphyre..'
+[[dependencies.minecraft]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18,1.18.1,1.18.2]"
+    ordering="NONE"
+    side="BOTH"
