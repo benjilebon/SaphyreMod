@@ -21,6 +21,7 @@ import org.slf4j.Logger;
 //TODO: Re-add network stack
 //TODO: Verify resources
 //TODO: Fix Saphyre Ore no drops
+//TODO: Fix Saphyre Ore no generation
 
 /////////////////
 

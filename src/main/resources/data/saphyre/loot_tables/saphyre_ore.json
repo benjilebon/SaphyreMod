@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "sphyre:saphyre_ore"
+          "name": "saphyre:saphyre_ore"
         }
       ],
       "conditions": [
