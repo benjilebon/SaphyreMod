@@ -1,6 +1,6 @@
 package com.azer467.saphyre;
 
-import com.azer467.saphyre.core.world.OreGeneration;
+import com.azer467.saphyre.core.world.gen.SaphyreOreFeatures;
 import com.azer467.saphyre.init.BlockInit;
 import com.azer467.saphyre.init.ItemInit;
 import com.mojang.logging.LogUtils;
@@ -21,7 +21,6 @@ import org.slf4j.Logger;
 //TODO: Re-add network stack
 //TODO: Verify resources
 //TODO: Fix Saphyre Ore no drops
-//TODO: Fix Saphyre Ore no generation
 
 /////////////////
 
@@ -56,20 +55,8 @@ public class SaphyreMain
         }
     };
 
-    public void setup(final FMLCommonSetupEvent event) // =<<<<<<<<<<<<
+    public void setup(final FMLCommonSetupEvent event)
     {
         LOGGER.info("Proxy Pre-initializing");
-        LOGGER.info("Registering Saphyre's World Ore Generator");
-        event.enqueueWork(OreGeneration::registerOresGeneration);
     }
-
-//    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-//    public static class RegistryEvents
-//    {
-//        @SubscribeEvent
-//        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
-//        {
-//            LOGGER.info("Registering recipes");
-//        }
-//    }
 }
