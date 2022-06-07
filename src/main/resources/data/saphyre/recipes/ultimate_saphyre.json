@@ -1,11 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "conditions": [
-    {
-      "type": "is_mod_present",
-      "mod": "saphyre"
-    }
-  ],
   "pattern": [
     "E#E",
     "PQP",

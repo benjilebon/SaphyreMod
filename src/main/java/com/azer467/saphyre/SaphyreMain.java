@@ -1,6 +1,5 @@
 package com.azer467.saphyre;
 
-import com.azer467.saphyre.core.world.gen.SaphyreOreFeatures;
 import com.azer467.saphyre.init.BlockInit;
 import com.azer467.saphyre.init.ItemInit;
 import com.mojang.logging.LogUtils;
@@ -9,17 +8,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 // PORT TO 1.18.2
 
-//TODO: Add missing items
 //TODO: Re-add gifting system
 //TODO: Re-add network stack
-//TODO: Re-add recipes (resources)
 //TODO: Verify good version printing in mod list
 
 /////////////////

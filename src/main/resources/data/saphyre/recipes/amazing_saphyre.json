@@ -1,11 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "conditions": [
-    {
-      "type": "is_mod_present",
-      "mod": "saphyre"
-    }
-  ],
   "pattern": [
     "#C#",
     "SLS",
@@ -22,8 +16,7 @@
       "item": "saphyre:enhanced_saphyre"
     },
     "L": {
-      "item": "minecraft:dye",
-      "data": 4
+      "item": "minecraft:lapis_lazuli"
     }
   },
   "result": {

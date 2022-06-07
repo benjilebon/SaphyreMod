@@ -1,5 +1,0 @@
-{
-  "conditions": {
-    "is_mod_present": "com.azer467.saphyre.util.handlers.IsModPresentConditionHandler"
-  }
-}
