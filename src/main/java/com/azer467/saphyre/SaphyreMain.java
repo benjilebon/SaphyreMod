@@ -19,8 +19,8 @@ import org.slf4j.Logger;
 //TODO: Add missing items
 //TODO: Re-add gifting system
 //TODO: Re-add network stack
-//TODO: Verify resources
-//TODO: Fix Saphyre Ore no drops
+//TODO: Re-add recipes (resources)
+//TODO: Verify good version printing in mod list
 
 /////////////////
 
@@ -39,8 +39,6 @@ public class SaphyreMain
     {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        bus.addListener(this::setup);
-
         BlockInit.BLOCKS.register(bus);
         ItemInit.ITEMS.register(bus);
 
@@ -54,9 +52,4 @@ public class SaphyreMain
             return ItemInit.SAPHYRE_ORE.get().getDefaultInstance();
         }
     };
-
-    public void setup(final FMLCommonSetupEvent event)
-    {
-        LOGGER.info("Proxy Pre-initializing");
-    }
 }
