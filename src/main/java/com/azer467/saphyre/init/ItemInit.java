@@ -33,26 +33,45 @@ public final class ItemInit
     //TODO: cleaner instanciation with method that register to ITEMS to avoid repeating itemName
     public static final RegistryObject<Item> SAPHYRE = ITEMS.register(
             "saphyre",
-            () -> new GiftItem("saphyre", new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB))
+            () -> new GiftItem(
+                    "saphyre",
+                    "minecraft:igloo_chest",
+                    new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
+            )
     );
 
     public static final RegistryObject<Item> ENHANCED_SAPHYRE = ITEMS.register(
             "enhanced_saphyre",
-            () -> new GiftItem("enhanced_saphyre", new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB))
+            () -> new GiftItem(
+                    "enhanced_saphyre",
+                    "minecraft:abandoned_mineshaft",
+                    new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
+            )
     );
 
     public static final RegistryObject<Item> AMAZING_SAPHYRE = ITEMS.register(
             "amazing_saphyre",
-            () -> new GiftItem("amazing_saphyre", new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB))
+            () -> new GiftItem(
+                    "amazing_saphyre",
+                    "minecraft:jungle_temple",
+                    new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
+            )
     );
 
     public static final RegistryObject<Item> INCREDIBLE_SAPHYRE = ITEMS.register(
             "incredible_saphyre",
-            () -> new GiftItem("incredible_saphyre", new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB))
+            () -> new GiftItem(
+                    "incredible_saphyre",
+                    "minecraft:end_city_treasure",
+                    new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB))
     );
 
     public static final RegistryObject<Item> ULTIMATE_SAPHYRE = ITEMS.register(
             "ultimate_saphyre",
-            () -> new GiftItem("ultimate_saphyre", new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB))
+            () -> new GiftItem(
+                    "ultimate_saphyre",
+                    "minecraft:buried_treasure",
+                    new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
+            )
     );
 }
