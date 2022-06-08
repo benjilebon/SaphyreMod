@@ -18,8 +18,10 @@ import org.slf4j.Logger;
 
 /////////////////
 
+//TODO: Readme update
 //TODO: Config integration
 //TODO: Achievements
+//TODO: Add Saphyre Entity
 
 @Mod(SaphyreMetadata.MODID)
 public class SaphyreMain
