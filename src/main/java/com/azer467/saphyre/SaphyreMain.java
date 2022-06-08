@@ -14,17 +14,12 @@ import org.slf4j.Logger;
 
 // PORT TO 1.18.2
 
-//TODO: Re-add gifting system
-//TODO: Re-add network stack
 //TODO: Verify good version printing in mod list
 
 /////////////////
 
 //TODO: Config integration
-//TODO: Textures
-//TODO: Items Drops (common/rare tables etc.)
 //TODO: Achievements
-//TODO: Add items (drop loots etc.)
 
 @Mod(SaphyreMetadata.MODID)
 public class SaphyreMain

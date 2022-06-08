@@ -1,6 +1,5 @@
 {
   "itemGroup.Saphyre": "Saphyre",
-  "item.saphyre_ingot.name": "Saphyre Ingot",
   "block.saphyre.saphyre_ore": "Saphyre Ore",
 
   "item.saphyre.saphyre": "Saphyre",
@@ -19,6 +18,5 @@
   "itemTooltip.saphyre.ultimate_saphyre": "§7WOOOOOOF§r",
 
   "message.gifting.serverError": "Woops ! a Saphyre internal error occurred...",
-  "message.gifting.item.noSpaceInInventory": "I wanted to give you a gift, but you can't carry it...",
-  "message.gifting.item.success": "success=You got gifted : x%d %s"
+  "message.gifting.item.success": "You got gifted : x%d %s"
 }

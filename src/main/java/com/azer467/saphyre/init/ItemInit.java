@@ -24,18 +24,12 @@ public final class ItemInit
         )
     );
 
-    public static final RegistryObject<Item> SAPHYRE_INGOT = ITEMS.register(
-            "saphyre_ingot",
-            () -> new Item(new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB))
-    );
-
-
     //TODO: cleaner instanciation with method that register to ITEMS to avoid repeating itemName
     public static final RegistryObject<Item> SAPHYRE = ITEMS.register(
             "saphyre",
             () -> new GiftItem(
                     "saphyre",
-                    "minecraft:igloo_chest",
+                    "minecraft:chests/igloo_chest",
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
             )
     );
@@ -44,7 +38,7 @@ public final class ItemInit
             "enhanced_saphyre",
             () -> new GiftItem(
                     "enhanced_saphyre",
-                    "minecraft:abandoned_mineshaft",
+                    "minecraft:chests/abandoned_mineshaft",
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
             )
     );
@@ -53,7 +47,7 @@ public final class ItemInit
             "amazing_saphyre",
             () -> new GiftItem(
                     "amazing_saphyre",
-                    "minecraft:jungle_temple",
+                    "minecraft:chests/jungle_temple",
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
             )
     );
@@ -62,7 +56,7 @@ public final class ItemInit
             "incredible_saphyre",
             () -> new GiftItem(
                     "incredible_saphyre",
-                    "minecraft:end_city_treasure",
+                    "minecraft:chests/end_city_treasure",
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB))
     );
 
@@ -70,7 +64,7 @@ public final class ItemInit
             "ultimate_saphyre",
             () -> new GiftItem(
                     "ultimate_saphyre",
-                    "minecraft:buried_treasure",
+                    "minecraft:chests/bastion_treasure",
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
             )
     );

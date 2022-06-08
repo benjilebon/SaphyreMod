@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "saphyre:saphyre_ore"
+  },
+  "result": "saphyre:saphyre",
+  "experience": 0.4,
+  "cookingtime": 200
+}

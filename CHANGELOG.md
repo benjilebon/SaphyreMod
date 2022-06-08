@@ -13,6 +13,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 ### Added
 
 - Port to Minecraft 1.18.2
+- Textures
+
+### Changed
+
+- Hover gifted items in chat
+
+### Removed
+
+- Saphyre Ingot, in favour of direct smelting to saphyre usable item
 
 ## [0.2.0-112-FORGE] - UNRELEASED
 

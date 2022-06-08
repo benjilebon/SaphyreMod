@@ -15,8 +15,9 @@ plugins {
 }
 apply plugin: 'net.minecraftforge.gradle'
 
+def modVersion = "0.3"
 
-version = '0.3'
+version = modVersion
 group = 'com.azer467.saphyre' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'saphyre'
 
@@ -175,7 +176,7 @@ jar {
         attributes([
                 "Specification-Title"     : "saphyre",
                 "Specification-Vendor"    : "azer467",
-                "Specification-Version"   : "0.3",
+                "Specification-Version"   : modVersion,
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "azer467",
