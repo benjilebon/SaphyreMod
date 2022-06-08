@@ -8,7 +8,7 @@ When a version is ported to a new game release, it starts from the preceding ver
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-## [0.3.0-118-FORGE] - UNRELEASED
+## [0.3.0-118-FORGE] - 06/06/2022
 
 ### Added
 
