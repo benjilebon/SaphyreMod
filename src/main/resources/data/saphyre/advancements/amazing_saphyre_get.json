@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "saphyre:amazing_saphyre"
+    },
+    "title": {
+      "translate": "saphyre.advancements.amazing_saphyre_get.title",
+      "color": "green"
+    },
+    "description": {
+      "translate": "saphyre.advancements.amazing_saphyre_get.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "saphyre:enhanced_saphyre_get",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "saphyre:amazing_saphyre"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

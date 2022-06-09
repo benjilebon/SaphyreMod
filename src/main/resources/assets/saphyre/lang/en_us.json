@@ -18,5 +18,23 @@
   "itemTooltip.saphyre.ultimate_saphyre": "§7WOOOOOOF§r",
 
   "message.gifting.serverError": "Woops ! a Saphyre internal error occurred...",
-  "message.gifting.item.success": "You got gifted : x%d %s"
+  "message.gifting.item.success": "You got gifted : x%d %s",
+
+  "saphyre.advancements.saphyre_ore_get.title": "The forgotten doG",
+  "saphyre.advancements.saphyre_ore_get.description": "Where is this suspicious ore from ?",
+
+  "saphyre.advancements.saphyre_get.title": "The Saphyre",
+  "saphyre.advancements.saphyre_get.description": "Get a Saphyre from smelting",
+
+  "saphyre.advancements.enhanced_saphyre_get.title": "Always brighter",
+  "saphyre.advancements.enhanced_saphyre_get.description": "Enhance a Saphyre to get better loots",
+
+  "saphyre.advancements.amazing_saphyre_get.title": "It only gets better",
+  "saphyre.advancements.amazing_saphyre_get.description": "Enhance an enhanced Saphyre",
+
+  "saphyre.advancements.incredible_saphyre_get.title": "Gacha Lover",
+  "saphyre.advancements.incredible_saphyre_get.description": "Enhance an enhanced Saphyre that got enhanced",
+
+  "saphyre.advancements.ultimate_saphyre_get.title": "Ultimate Looter",
+  "saphyre.advancements.ultimate_saphyre_get.description": "Enhance an enhanced enhanc... WILL IT EVER STOP ??"
 }

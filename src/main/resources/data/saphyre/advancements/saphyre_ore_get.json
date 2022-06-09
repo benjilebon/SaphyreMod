@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "saphyre:saphyre_ore"
+    },
+    "title": {
+      "translate": "saphyre.advancements.saphyre_ore_get.title"
+    },
+    "description": {
+      "translate": "saphyre.advancements.saphyre_ore_get.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "saphyre:textures/blocks/saphyre_ore.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "saphyre:saphyre_ore"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -15,7 +15,7 @@ plugins {
 }
 apply plugin: 'net.minecraftforge.gradle'
 
-def modVersion = "0.3"
+def modVersion = "0.4.0"
 
 version = modVersion
 group = 'com.azer467.saphyre' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
