@@ -18,10 +18,11 @@ import org.slf4j.Logger;
 
 /////////////////
 
+//TODO: Story telling (i'm definitely not inspired)
 //TODO: Readme update
 //TODO: Config integration
-//TODO: Achievements
 //TODO: Add Saphyre Entity
+//TODO: Add particles when using saphyre
 
 @Mod(SaphyreMetadata.MODID)
 public class SaphyreMain
