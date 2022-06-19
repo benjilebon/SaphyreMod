@@ -2,7 +2,7 @@ package com.azer467.saphyre.events.init;
 
 import com.azer467.saphyre.SaphyreMetadata;
 import com.azer467.saphyre.entity.SaphyreEntity;
-import com.azer467.saphyre.entity.init.EntityInit;
+import com.azer467.saphyre.init.EntityInit;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

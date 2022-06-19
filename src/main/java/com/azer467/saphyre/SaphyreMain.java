@@ -1,9 +1,10 @@
 package com.azer467.saphyre;
 
-import com.azer467.saphyre.entity.init.EntityInit;
+import com.azer467.saphyre.init.EntityInit;
 import com.azer467.saphyre.entity.client.SaphyreRenderer;
 import com.azer467.saphyre.init.BlockInit;
 import com.azer467.saphyre.init.ItemInit;
+import com.azer467.saphyre.init.ParticlesInit;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
@@ -25,7 +26,6 @@ import software.bernie.geckolib3.GeckoLib;
 //TODO: Story telling (i'm definitely not inspired)
 //TODO: Config integration
 //TODO: Better Logging
-//TODO: Add particles when using saphyre
 
 @Mod(SaphyreMetadata.MODID)
 public class SaphyreMain
@@ -36,14 +36,14 @@ public class SaphyreMain
     {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ParticlesInit.PARTICLE_TYPES.register(bus);
         BlockInit.BLOCKS.register(bus);
         ItemInit.ITEMS.register(bus);
-
         EntityInit.register(bus);
+
         bus.addListener(this::clientSetup);
 
         GeckoLib.initialize();
-
 
         MinecraftForge.EVENT_BUS.register(this);
     }

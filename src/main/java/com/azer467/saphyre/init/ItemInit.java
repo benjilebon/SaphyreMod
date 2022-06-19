@@ -2,8 +2,7 @@ package com.azer467.saphyre.init;
 
 import com.azer467.saphyre.SaphyreMain;
 import com.azer467.saphyre.SaphyreMetadata;
-import com.azer467.saphyre.entity.init.EntityInit;
-import com.azer467.saphyre.objects.items.GiftItem;
+import com.azer467.saphyre.items.GiftItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeSpawnEggItem;
@@ -33,7 +32,7 @@ public final class ItemInit
                     "saphyre",
                     "minecraft:chests/igloo_chest",
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
-            )
+            ).setGiftParticle(ParticlesInit.GIFT_PARTICLES)
     );
 
     public static final RegistryObject<Item> ENHANCED_SAPHYRE = ITEMS.register(
@@ -42,7 +41,7 @@ public final class ItemInit
                     "enhanced_saphyre",
                     "minecraft:chests/abandoned_mineshaft",
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
-            )
+            ).setGiftParticle(ParticlesInit.ENHANCED_GIFT_PARTICLES)
     );
 
     public static final RegistryObject<Item> AMAZING_SAPHYRE = ITEMS.register(
@@ -51,7 +50,7 @@ public final class ItemInit
                     "amazing_saphyre",
                     "minecraft:chests/jungle_temple",
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
-            )
+            ).setGiftParticle(ParticlesInit.AMAZING_GIFT_PARTICLES)
     );
 
     public static final RegistryObject<Item> INCREDIBLE_SAPHYRE = ITEMS.register(
@@ -59,7 +58,8 @@ public final class ItemInit
             () -> new GiftItem(
                     "incredible_saphyre",
                     "minecraft:chests/end_city_treasure",
-                    new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB))
+                    new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
+            ).setGiftParticle(ParticlesInit.INCREDIBLE_GIFT_PARTICLES)
     );
 
     public static final RegistryObject<Item> ULTIMATE_SAPHYRE = ITEMS.register(
@@ -68,7 +68,7 @@ public final class ItemInit
                     "ultimate_saphyre",
                     "minecraft:chests/bastion_treasure",
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
-            )
+            ).setGiftParticle(ParticlesInit.ULTIMATE_GIFT_PARTICLES)
     );
 
 

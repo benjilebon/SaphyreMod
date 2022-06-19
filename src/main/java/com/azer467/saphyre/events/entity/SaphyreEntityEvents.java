@@ -1,7 +1,7 @@
 package com.azer467.saphyre.events.entity;
 
 import com.azer467.saphyre.SaphyreMetadata;
-import com.azer467.saphyre.entity.init.EntityInit;
+import com.azer467.saphyre.init.EntityInit;
 import com.azer467.saphyre.entity.SaphyreEntity;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

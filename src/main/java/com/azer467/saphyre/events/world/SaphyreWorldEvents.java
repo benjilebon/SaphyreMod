@@ -2,7 +2,7 @@ package com.azer467.saphyre.events.world;
 
 
 import com.azer467.saphyre.SaphyreMetadata;
-import com.azer467.saphyre.entity.init.EntityInit;
+import com.azer467.saphyre.init.EntityInit;
 import com.azer467.saphyre.world.SaphyreOreGeneration;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.Biome;

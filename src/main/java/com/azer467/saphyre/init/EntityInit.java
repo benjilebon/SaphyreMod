@@ -1,4 +1,4 @@
-package com.azer467.saphyre.entity.init;
+package com.azer467.saphyre.init;
 
 import com.azer467.saphyre.SaphyreMetadata;
 import com.azer467.saphyre.entity.SaphyreEntity;
