@@ -40,10 +40,10 @@ public class SaphyreEntity extends Animal implements IAnimatable {
 
     public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 60.0D)
+                .add(Attributes.MAX_HEALTH, 20.0D)
                 .add(Attributes.ATTACK_DAMAGE, 4.0f)
                 .add(Attributes.ATTACK_SPEED, 2.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.3f)
+                .add(Attributes.MOVEMENT_SPEED, 0.25f)
                 .build();
     }
 
@@ -78,8 +78,8 @@ public class SaphyreEntity extends Animal implements IAnimatable {
 
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new FloatGoal(this));
-        this.goalSelector.addGoal(2, new PanicGoal(this, 1.75f));
-        this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Player.class, 8.0f, 1.25d, 1.75d));
+        this.goalSelector.addGoal(2, new PanicGoal(this, 1.25f));
+        this.goalSelector.addGoal(3, new AvoidEntityGoal<>(this, Player.class, 8.0f, 1.10d, 1.45d));
         this.goalSelector.addGoal(4, new WaterAvoidingRandomStrollGoal(this, 0.8D));
         this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class,  8.0f));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
