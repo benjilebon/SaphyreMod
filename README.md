@@ -1,23 +1,22 @@
-# Saphyre : The Gacha-Like Minecraft mod
+# The Saphyre
 
 
-Saphyre is a mod that adds a new resource to the game : The Saphyre
+Saphyre is a mod that adds a new resource and a new entity to the game :
 
-This unique metal has the power and ability to transform to any random item in the game when used
-
-**Saphyre adds a new exciting "gift" kind-of system to the game**
+- The Saphyre is a new generated ore that can be crafted into a crystal that gives you a random item based on how enhanced it is
+- Saphyre is also an entity that looks like a dog, it is fleeing humans with very high speed and gives Saphyre on kill
 
 
 ## Current features
 
-- Saphyre Ore Generation in the overworld
-- Gifting system
-- Craft improved version of saphyre to have better loots !
-- Achievements
+- New Ore : The Saphyre Ore
+- New entity : Saphyre
+- New Advancements
+- New Items : Saphyre (with its modified version : Enhanced, Amazing, Incredible & Ultimate)
 
 ## Planned features
 
-- See todos in the project (mostly inside SaphyreMain)
+- See todos in the project (mostly inside SaphyreMain.java)
 
 
 # How to install & contribute
