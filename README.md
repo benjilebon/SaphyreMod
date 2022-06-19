@@ -1,5 +1,6 @@
 # The Saphyre
 
+**Requires Geckolib 3 or above** (you can find it [here](https://www.curseforge.com/minecraft/mc-mods/geckolib))
 
 Saphyre is a mod that adds a new resource and a new entity to the game :
 

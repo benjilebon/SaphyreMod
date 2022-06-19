@@ -10,16 +10,16 @@ displayName="Saphyre"
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 #logoFile="examplemod.png" #optional
 credits="Aze (azer467), Winigan, Elodias92 for having the best dog on earth" #optional
-authors="Aze, Winigan"
-description='The shiny and mysterious saphyre..'
-[[dependencies.minecraft]]
+authors="Aze (azer467), Winigan"
+description='The Saphyre'
+[[dependencies.saphyre]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18,1.18.1,1.18.2]"
+    versionRange="[1.18,1.18.2]"
     ordering="NONE"
     side="BOTH"
-[[dependencies.geckolib]]
-    modId="geckolib"
+[[dependencies.saphyre]]
+    modId="geckolib3"
     mandatory=true
     versionRange="[3.0,)"
     ordering="NONE"
