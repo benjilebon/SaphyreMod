@@ -1,4 +1,4 @@
-package com.azer467.saphyre.core.world.gen;
+package com.azer467.saphyre.world;
 
 import com.azer467.saphyre.init.BlockInit;
 import net.minecraft.core.Holder;

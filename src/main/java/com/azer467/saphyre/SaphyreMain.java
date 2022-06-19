@@ -1,16 +1,20 @@
 package com.azer467.saphyre;
 
+import com.azer467.saphyre.entity.init.EntityInit;
+import com.azer467.saphyre.entity.client.SaphyreRenderer;
 import com.azer467.saphyre.init.BlockInit;
 import com.azer467.saphyre.init.ItemInit;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 // PORT TO 1.18.2
 
@@ -19,9 +23,8 @@ import org.slf4j.Logger;
 /////////////////
 
 //TODO: Story telling (i'm definitely not inspired)
-//TODO: Readme update
 //TODO: Config integration
-//TODO: Add Saphyre Entity
+//TODO: Better Logging
 //TODO: Add particles when using saphyre
 
 @Mod(SaphyreMetadata.MODID)
@@ -36,13 +39,23 @@ public class SaphyreMain
         BlockInit.BLOCKS.register(bus);
         ItemInit.ITEMS.register(bus);
 
+        EntityInit.register(bus);
+        bus.addListener(this::clientSetup);
+
+        GeckoLib.initialize();
+
+
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    private void clientSetup(final FMLClientSetupEvent event) {
+        EntityRenderers.register(EntityInit.SAPHYRE_ENTITY.get(), SaphyreRenderer::new);
     }
 
     // TODO: Move to separated file
     public static final CreativeModeTab SAPHYRE_TAB = new CreativeModeTab(SaphyreMetadata.NAME) {
         @Override
-        public @NotNull ItemStack makeIcon() {
+        public ItemStack makeIcon() {
             return ItemInit.SAPHYRE_ORE.get().getDefaultInstance();
         }
     };

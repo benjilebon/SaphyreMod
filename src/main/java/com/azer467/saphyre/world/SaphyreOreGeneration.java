@@ -1,5 +1,6 @@
-package com.azer467.saphyre.core.world.gen;
+package com.azer467.saphyre.world;
 
+import com.azer467.saphyre.world.SaphyreOreFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;

@@ -2,9 +2,11 @@ package com.azer467.saphyre.init;
 
 import com.azer467.saphyre.SaphyreMain;
 import com.azer467.saphyre.SaphyreMetadata;
+import com.azer467.saphyre.entity.init.EntityInit;
 import com.azer467.saphyre.objects.items.GiftItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -65,6 +67,17 @@ public final class ItemInit
             () -> new GiftItem(
                     "ultimate_saphyre",
                     "minecraft:chests/bastion_treasure",
+                    new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
+            )
+    );
+
+
+    public static final RegistryObject<Item> RACCOON_SPAWN_EGG = ITEMS.register(
+            "saphyre_spawn_egg",
+            () -> new ForgeSpawnEggItem(
+                    EntityInit.SAPHYRE_ENTITY,
+                    0xffffff,
+                    0xeeeeee,
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
             )
     );

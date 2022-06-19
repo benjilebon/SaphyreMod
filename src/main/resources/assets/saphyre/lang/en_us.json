@@ -17,6 +17,7 @@
   "item.saphyre.ultimate_saphyre":  "§6Ultimate Saphyre§r",
   "itemTooltip.saphyre.ultimate_saphyre": "§7WOOOOOOF§r",
 
+  "item.saphyre.saphyre_spawn_egg":  "Saphyre Spawn Egg",
   "message.gifting.serverError": "Woops ! a Saphyre internal error occurred...",
   "message.gifting.item.success": "You got gifted : x%d %s",
 
