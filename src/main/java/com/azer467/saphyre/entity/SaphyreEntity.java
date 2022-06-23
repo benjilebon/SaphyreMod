@@ -1,5 +1,6 @@
 package com.azer467.saphyre.entity;
 
+import com.azer467.saphyre.SaphyreMain;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -94,7 +95,7 @@ public class SaphyreEntity extends Animal implements IAnimatable {
     public static boolean canSpawn(EntityType<SaphyreEntity> entity, LevelAccessor level, MobSpawnType spawnType, BlockPos pos, Random random) {
         boolean willSpawn = checkAnimalSpawnRules(entity, level, spawnType, pos, random);
         if (willSpawn) {
-            // System.out.println("Spawned Saphyre");
+            SaphyreMain.LOGGER.debug("Spawned Saphyre Entity at " + pos);
         }
 
         return willSpawn;

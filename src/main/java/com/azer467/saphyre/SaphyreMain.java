@@ -33,10 +33,11 @@ import software.bernie.geckolib3.GeckoLib;
 @Mod(SaphyreMetadata.MODID)
 public class SaphyreMain
 {
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public SaphyreMain()
     {
+        LOGGER.info("Loading Saphyre");
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ParticlesInit.PARTICLE_TYPES.register(bus);
@@ -52,6 +53,8 @@ public class SaphyreMain
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, SaphyreCommonConfigs.SPEC, "saphyre-common.toml");
 
         MinecraftForge.EVENT_BUS.register(this);
+
+        LOGGER.info("Saphyre has been successfully loaded");
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {

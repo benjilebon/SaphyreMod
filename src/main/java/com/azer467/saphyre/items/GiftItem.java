@@ -1,5 +1,6 @@
 package com.azer467.saphyre.items;
 
+import com.azer467.saphyre.SaphyreMain;
 import com.azer467.saphyre.SaphyreMetadata;
 import com.azer467.saphyre.config.SaphyreClientConfigs;
 import net.minecraft.Util;
@@ -56,6 +57,7 @@ public class GiftItem extends Item {
         if (level.isClientSide) {
             ItemStack currentSaphyre = player.getItemInHand(interactionHand);
             player.startUsingItem(interactionHand);
+            SaphyreMain.LOGGER.debug("Player " + player.getDisplayName().getContents() + " used " + currentSaphyre.getDisplayName().getContents());
             if (Boolean.TRUE.equals(SaphyreClientConfigs.SHOW_PARTICLES.get())) {
                 spawnGiftParticles(level, player);
             }
