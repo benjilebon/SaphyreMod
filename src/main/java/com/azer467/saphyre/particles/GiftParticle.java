@@ -6,9 +6,9 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class GiftParticles extends TextureSheetParticle {
-    protected GiftParticles(ClientLevel level, double xCoord, double yCoord, double zCoord,
-                            SpriteSet spriteSet, double xd, double yd, double zd) {
+public class GiftParticle extends TextureSheetParticle {
+    protected GiftParticle(ClientLevel level, double xCoord, double yCoord, double zCoord,
+                           SpriteSet spriteSet, double xd, double yd, double zd) {
         super(level, xCoord, yCoord, zCoord, xd, yd, zd);
 
         this.friction = 0.85F;
@@ -45,7 +45,7 @@ public class GiftParticles extends TextureSheetParticle {
         }
 
         @Override
-        public void setParticleColor(GiftParticles particle) {
+        public void setParticleColor(GiftParticle particle) {
             particle.setColor(0.125f, 0.900f, 0.980f);
         }
     }
@@ -56,7 +56,7 @@ public class GiftParticles extends TextureSheetParticle {
         }
 
         @Override
-        public void setParticleColor(GiftParticles particle) {
+        public void setParticleColor(GiftParticle particle) {
             particle.setColor(0.015f, 0.505f, 0.250f);
         }
     }
@@ -67,7 +67,7 @@ public class GiftParticles extends TextureSheetParticle {
         }
 
         @Override
-        public void setParticleColor(GiftParticles particle) {
+        public void setParticleColor(GiftParticle particle) {
             particle.setColor(0.835f, 0.065f, 0.780f);
         }
     }
@@ -78,7 +78,7 @@ public class GiftParticles extends TextureSheetParticle {
         }
 
         @Override
-        public void setParticleColor(GiftParticles particle) {
+        public void setParticleColor(GiftParticle particle) {
             particle.setColor(1.0f, 0.525f, 0.020f);
         }
     }
@@ -91,14 +91,14 @@ public class GiftParticles extends TextureSheetParticle {
             this.sprites = spriteSet;
         }
 
-        public void setParticleColor(GiftParticles particle) {
+        public void setParticleColor(GiftParticle particle) {
             particle.setColor(0.090f, 0.120f, 0.835f);
         }
 
         public Particle createParticle(SimpleParticleType particleType, ClientLevel level,
                                        double x, double y, double z,
                                        double dx, double dy, double dz) {
-            GiftParticles particle = new GiftParticles(level, x, y, z, this.sprites, dx, dy, dz);
+            GiftParticle particle = new GiftParticle(level, x, y, z, this.sprites, dx, dy, dz);
             this.setParticleColor(particle);
             return particle;
         }

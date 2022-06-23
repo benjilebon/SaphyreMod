@@ -1,5 +1,6 @@
 package com.azer467.saphyre.world;
 
+import com.azer467.saphyre.config.SaphyreCommonConfigs;
 import com.azer467.saphyre.init.BlockInit;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
@@ -28,9 +29,12 @@ public class SaphyreOreFeatures {
             "saphyre_placed_ore",
             SAPHYRE_FEATURE_ORE,
             List.of(
-                    CountPlacement.of(6), // Number of veins in a chunk
+                    CountPlacement.of(SaphyreCommonConfigs.SAPHYRE_ORE_VEINS_PER_CHUNK.get()), // Number of veins in a chunk
                     InSquarePlacement.spread(), // Veins distribution method
-                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(80)), // see where does aboveBottom starts
+                    HeightRangePlacement.uniform(
+                            VerticalAnchor.aboveBottom(SaphyreCommonConfigs.SAPHYRE_ORE_VEINS_MIN_HEIGHT.get()),
+                            VerticalAnchor.aboveBottom(SaphyreCommonConfigs.SAPHYRE_ORE_VEINS_MAX_HEIGHT.get())
+                    ), // see where does aboveBottom starts
                     BiomeFilter.biome() // ?
             )
     );

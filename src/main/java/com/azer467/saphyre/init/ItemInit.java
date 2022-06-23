@@ -2,6 +2,7 @@ package com.azer467.saphyre.init;
 
 import com.azer467.saphyre.SaphyreMain;
 import com.azer467.saphyre.SaphyreMetadata;
+import com.azer467.saphyre.config.SaphyreCommonConfigs;
 import com.azer467.saphyre.items.GiftItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -30,7 +31,7 @@ public final class ItemInit
             "saphyre",
             () -> new GiftItem(
                     "saphyre",
-                    "minecraft:chests/igloo_chest",
+                    SaphyreCommonConfigs.SAPHYRE_LOOT_TABLE.get(),
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
             ).setGiftParticle(ParticlesInit.GIFT_PARTICLES)
     );
@@ -39,7 +40,7 @@ public final class ItemInit
             "enhanced_saphyre",
             () -> new GiftItem(
                     "enhanced_saphyre",
-                    "minecraft:chests/abandoned_mineshaft",
+                    SaphyreCommonConfigs.ENHANCED_SAPHYRE_LOOT_TABLE.get(),
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
             ).setGiftParticle(ParticlesInit.ENHANCED_GIFT_PARTICLES)
     );
@@ -48,7 +49,7 @@ public final class ItemInit
             "amazing_saphyre",
             () -> new GiftItem(
                     "amazing_saphyre",
-                    "minecraft:chests/jungle_temple",
+                    SaphyreCommonConfigs.AMAZING_SAPHYRE_LOOT_TABLE.get(),
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
             ).setGiftParticle(ParticlesInit.AMAZING_GIFT_PARTICLES)
     );
@@ -57,7 +58,7 @@ public final class ItemInit
             "incredible_saphyre",
             () -> new GiftItem(
                     "incredible_saphyre",
-                    "minecraft:chests/end_city_treasure",
+                    SaphyreCommonConfigs.INCREDIBLE_SAPHYRE_LOOT_TABLE.get(),
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
             ).setGiftParticle(ParticlesInit.INCREDIBLE_GIFT_PARTICLES)
     );
@@ -66,7 +67,7 @@ public final class ItemInit
             "ultimate_saphyre",
             () -> new GiftItem(
                     "ultimate_saphyre",
-                    "minecraft:chests/bastion_treasure",
+                    SaphyreCommonConfigs.ULTIMATE_SAPHYRE_LOOT_TABLE.get(),
                     new Item.Properties().tab(SaphyreMain.SAPHYRE_TAB)
             ).setGiftParticle(ParticlesInit.ULTIMATE_GIFT_PARTICLES)
     );

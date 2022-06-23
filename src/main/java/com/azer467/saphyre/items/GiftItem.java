@@ -1,6 +1,7 @@
 package com.azer467.saphyre.items;
 
 import com.azer467.saphyre.SaphyreMetadata;
+import com.azer467.saphyre.config.SaphyreClientConfigs;
 import net.minecraft.Util;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.network.chat.Component;
@@ -55,7 +56,9 @@ public class GiftItem extends Item {
         if (level.isClientSide) {
             ItemStack currentSaphyre = player.getItemInHand(interactionHand);
             player.startUsingItem(interactionHand);
-            spawnGiftParticles(level, player);
+            if (Boolean.TRUE.equals(SaphyreClientConfigs.SHOW_PARTICLES.get())) {
+                spawnGiftParticles(level, player);
+            }
             return InteractionResultHolder.success(currentSaphyre);
         } else {
             LootTable giftTable = ((ServerLevel) level).getServer().getLootTables().get(new ResourceLocation(lootTable));

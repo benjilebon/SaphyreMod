@@ -32,7 +32,7 @@ import java.util.Random;
 
 public class SaphyreEntity extends Animal implements IAnimatable {
     private final AnimationFactory factory =  new AnimationFactory(this);
-    private static EntityDataAccessor<Float> CURRENT_SPEED = SynchedEntityData.defineId(SaphyreEntity.class, EntityDataSerializers.FLOAT);
+    private static final EntityDataAccessor<Float> CURRENT_SPEED = SynchedEntityData.defineId(SaphyreEntity.class, EntityDataSerializers.FLOAT);
 
     public SaphyreEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);

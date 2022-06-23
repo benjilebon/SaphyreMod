@@ -2,6 +2,7 @@ package com.azer467.saphyre.events.world;
 
 
 import com.azer467.saphyre.SaphyreMetadata;
+import com.azer467.saphyre.config.SaphyreCommonConfigs;
 import com.azer467.saphyre.init.EntityInit;
 import com.azer467.saphyre.world.SaphyreOreGeneration;
 import net.minecraft.world.entity.MobCategory;
@@ -19,7 +20,7 @@ public class SaphyreWorldEvents {
         SaphyreOreGeneration.generateOres(event);
 
         if (event.getCategory().equals(Biome.BiomeCategory.FOREST)) {
-            event.getSpawns().addSpawn(MobCategory.CREATURE, new SpawnerData(EntityInit.SAPHYRE_ENTITY.get(), 8, 1, 1));
+            event.getSpawns().addSpawn(MobCategory.CREATURE, new SpawnerData(EntityInit.SAPHYRE_ENTITY.get(), SaphyreCommonConfigs.SAPHYRE_ENTITY_SPAWN_WEIGHT.get(), 1, 1));
         }
     }
 }
