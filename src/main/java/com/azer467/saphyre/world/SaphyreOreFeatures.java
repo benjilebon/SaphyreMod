@@ -14,7 +14,6 @@ import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
-// TODO: Have some clearer methods for better maintenance
 public class SaphyreOreFeatures {
 
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> SAPHYRE_FEATURE_ORE = FeatureUtils.register(

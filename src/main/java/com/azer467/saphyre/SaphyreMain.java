@@ -21,14 +21,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
-// PORT TO 1.18.2
-
-//TODO: Verify good version printing in mod list
-
-/////////////////
-
 //TODO: Story telling (i'm definitely not inspired)
-//TODO: Better Logging
 
 @Mod(SaphyreMetadata.MODID)
 public class SaphyreMain
