@@ -9,8 +9,8 @@ displayName="Saphyre"
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 #logoFile="examplemod.png" #optional
-credits="Aze (azer467), Winigan, Elodias92 for having the best dog on earth" #optional
-authors="Aze (azer467), Winigan"
+credits="Aze (benjilebon), Winigan & Elodias92" #optional
+authors="Aze (benjilebon), Winigan"
 description='The Saphyre'
 [[dependencies.saphyre]]
     modId="minecraft"

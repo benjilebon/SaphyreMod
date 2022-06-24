@@ -8,16 +8,21 @@ When a version is ported to a new game release, it starts from the preceding ver
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 
-## [0.5.0-118-FORGE] - UNRELEASED
+## [1.0.0-118-FORGE] - 24/06/2022
 
 ### Added 
 
 - Particles
 - TOML Configuration
+- Console Logging
 
 ### Changed
 
 - Moved Particle & Entity inits to init package
+
+### Fixed
+
+- Full Inventory Handling 
 
 ## [0.4.0-118-FORGE] - 19/06/2022
 
