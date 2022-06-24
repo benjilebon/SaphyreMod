@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -47,35 +48,44 @@ public class GiftItem extends Item {
     @Override
     public void appendHoverText(ItemStack itemStack, Level level, List<Component> tooltipComponents, TooltipFlag isAdvanced)
     {
-        tooltipComponents.add(new TranslatableComponent("itemTooltip." + SaphyreMetadata.MODID + "." + itemName));
+        tooltipComponents.add(new TranslatableComponent("itemTooltip.saphyre.saphyre"));
         super.appendHoverText(itemStack, level, tooltipComponents, isAdvanced);
     }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand interactionHand)
     {
+        ItemStack currentSaphyre = player.getItemInHand(interactionHand);
         if (level.isClientSide) {
-            ItemStack currentSaphyre = player.getItemInHand(interactionHand);
             player.startUsingItem(interactionHand);
-            SaphyreMain.LOGGER.debug("Player " + player.getDisplayName().getContents() + " used " + currentSaphyre.getDisplayName().getContents());
             if (Boolean.TRUE.equals(SaphyreClientConfigs.SHOW_PARTICLES.get())) {
                 spawnGiftParticles(level, player);
             }
             return InteractionResultHolder.success(currentSaphyre);
         } else {
+            SaphyreMain.LOGGER.debug("Player " + player.getDisplayName().getContents() + " used " + currentSaphyre.getDisplayName().getContents());
             LootTable giftTable = ((ServerLevel) level).getServer().getLootTables().get(new ResourceLocation(lootTable));
             LootContext giftCtx = (new LootContext.Builder((ServerLevel) level)).create(LootContextParamSet.builder().build());
-
             List<ItemStack> generatedLoots = giftTable.getRandomItems(giftCtx);
             ItemStack givenLoot = generatedLoots.get(
                     ThreadLocalRandom.current().nextInt(generatedLoots.size()) % generatedLoots.size()
             );
 
             player.sendMessage(formatSuccessChatMessage(givenLoot), Util.NIL_UUID);
-            player.addItem(givenLoot);
+            if (this.canGift(player, givenLoot)) {
+                player.addItem(givenLoot);
+            } else {
+                ItemEntity itemEntity = new ItemEntity(level, player.getX(), player.getY() + 1.0D, player.getZ(), givenLoot);
+                level.addFreshEntity(itemEntity);
+            }
             player.getItemInHand(interactionHand).shrink(1);
+
             return InteractionResultHolder.pass(player.getItemInHand(interactionHand));
         }
+    }
+
+    private boolean canGift(Player player, ItemStack item) {
+        return player.getInventory().getFreeSlot() != -1 || player.getInventory().contains(item);
     }
 
     private void spawnGiftParticles(Level level, Player player) {
@@ -94,7 +104,7 @@ public class GiftItem extends Item {
         }
     }
 
-    private TranslatableComponent formatSuccessChatMessage(ItemStack itemStack) {
-        return new TranslatableComponent("message.gifting.item.success", itemStack.getCount(), itemStack.getDisplayName());
+    private TranslatableComponent formatSuccessChatMessage(ItemStack item) {
+        return new TranslatableComponent("message.gifting.item.success", item.getCount(), item.getDisplayName());
     }
 }

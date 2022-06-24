@@ -3,19 +3,11 @@
   "block.saphyre.saphyre_ore": "Saphyre Ore",
 
   "item.saphyre.saphyre": "Saphyre",
-  "itemTooltip.saphyre.saphyre": "§7A shiny piece§r",
-
   "item.saphyre.enhanced_saphyre":  "§9Enhanced Saphyre§r",
-  "itemTooltip.saphyre.enhanced_saphyre": "§7Even brighter !§r",
-
   "item.saphyre.amazing_saphyre":  "§2Amazing Saphyre§r",
-  "itemTooltip.saphyre.amazing_saphyre": "§7Such wow !§r",
-
   "item.saphyre.incredible_saphyre":  "§dIncredible Saphyre§r",
-  "itemTooltip.saphyre.incredible_saphyre": "§7UwU§r",
-
   "item.saphyre.ultimate_saphyre":  "§6Ultimate Saphyre§r",
-  "itemTooltip.saphyre.ultimate_saphyre": "§7WOOOOOOF§r",
+  "itemTooltip.saphyre.saphyre": "§7Right click to get a random item !§r",
 
   "entity.saphyre.saphyre_entity": "Saphyre",
   "item.saphyre.saphyre_spawn_egg":  "Saphyre Spawn Egg",
