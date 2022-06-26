@@ -4,6 +4,7 @@ import com.benjilebon.saphyre.SaphyreMetadata;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,6 +22,12 @@ public class SaphyreBiomeModifiers {
                 PlacedFeature.CODEC.fieldOf("feature").forGetter(SaphyreOreModifier::feature)
         ).apply(builder, SaphyreOreModifier::new))
     );
+
+    public static RegistryObject<Codec<SaphyreEntityModifier>> ENTITY_MODIFIER = BIOME_MODIFIERS.register("entities", () ->
+            RecordCodecBuilder.create(builder -> builder.group(
+                    Biome.LIST_CODEC.fieldOf("biomes").forGetter(SaphyreEntityModifier::biomes),
+                    MobSpawnSettings.SpawnerData.CODEC.fieldOf("entity").forGetter(SaphyreEntityModifier::spawnerData)
+            ).apply(builder, SaphyreEntityModifier::new)));
 
     public static void register(IEventBus bus) {
         BIOME_MODIFIERS.register(bus);

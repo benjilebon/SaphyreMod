@@ -1,0 +1,10 @@
+{
+  "type": "saphyre:entities",
+  "biomes": "#minecraft:is_forest",
+  "entity": {
+    "type": "saphyre:saphyre_entity",
+    "weight": 8,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

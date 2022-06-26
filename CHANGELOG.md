@@ -7,6 +7,19 @@ Each version has its own version that follows isolated versioning pattern with t
 When a version is ported to a new game release, it starts from the preceding version major.minor numbers
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+## [1.0.1-119-FORGE] - UNRELEASED
+
+### Added
+
+- Port to Minecraft 1.19
+
+### Changed
+
+- Console print a warning concerning OreGen configuration not working for now
+
+### Fixed
+
+- Error handling when using Saphyre + Inexisting loot table handling before sending wrong packet to client
 
 ## [1.0.0-118-FORGE] - 24/06/2022
 

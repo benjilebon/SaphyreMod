@@ -12,7 +12,7 @@
   "entity.saphyre.saphyre_entity": "Saphyre",
   "item.saphyre.saphyre_spawn_egg":  "Saphyre Spawn Egg",
 
-  "message.gifting.serverError": "Woops ! a Saphyre internal error occurred...",
+  "message.gifting.serverError": "An error occurred using Saphyre",
   "message.gifting.item.success": "You got gifted : x%d %s",
 
   "saphyre.advancements.saphyre_ore_get.title": "The forgotten doG",

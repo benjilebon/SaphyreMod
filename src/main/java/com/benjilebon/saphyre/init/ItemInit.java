@@ -7,6 +7,7 @@ import com.benjilebon.saphyre.items.GiftItem;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -28,15 +29,14 @@ public final class ItemInit
     );
 
 
-    public static final RegistryObject<Item> SAPHYRE = registerGiftItem("saphyre", SaphyreCommonConfigs.SAPHYRE_LOOT_TABLE.get(), ParticlesInit.GIFT_PARTICLES);
-    public static final RegistryObject<Item> ENHANCED_SAPHYRE = registerGiftItem("enhanced_saphyre", SaphyreCommonConfigs.ENHANCED_SAPHYRE_LOOT_TABLE.get(), ParticlesInit.ENHANCED_GIFT_PARTICLES);
-    public static final RegistryObject<Item> AMAZING_SAPHYRE = registerGiftItem("amazing_saphyre", SaphyreCommonConfigs.AMAZING_SAPHYRE_LOOT_TABLE.get(), ParticlesInit.AMAZING_GIFT_PARTICLES);
-    public static final RegistryObject<Item> INCREDIBLE_SAPHYRE = registerGiftItem("incredible_saphyre", SaphyreCommonConfigs.INCREDIBLE_SAPHYRE_LOOT_TABLE.get(), ParticlesInit.INCREDIBLE_GIFT_PARTICLES);
-    public static final RegistryObject<Item> ULTIMATE_SAPHYRE = registerGiftItem("ultimate_saphyre", SaphyreCommonConfigs.ULTIMATE_SAPHYRE_LOOT_TABLE.get(), ParticlesInit.ULTIMATE_GIFT_PARTICLES);
+    public static final RegistryObject<Item> SAPHYRE = registerGiftItem("saphyre", SaphyreCommonConfigs.SAPHYRE_LOOT_TABLE, ParticlesInit.GIFT_PARTICLES);
+    public static final RegistryObject<Item> ENHANCED_SAPHYRE = registerGiftItem("enhanced_saphyre", SaphyreCommonConfigs.ENHANCED_SAPHYRE_LOOT_TABLE, ParticlesInit.ENHANCED_GIFT_PARTICLES);
+    public static final RegistryObject<Item> AMAZING_SAPHYRE = registerGiftItem("amazing_saphyre", SaphyreCommonConfigs.AMAZING_SAPHYRE_LOOT_TABLE, ParticlesInit.AMAZING_GIFT_PARTICLES);
+    public static final RegistryObject<Item> INCREDIBLE_SAPHYRE = registerGiftItem("incredible_saphyre", SaphyreCommonConfigs.INCREDIBLE_SAPHYRE_LOOT_TABLE, ParticlesInit.INCREDIBLE_GIFT_PARTICLES);
+    public static final RegistryObject<Item> ULTIMATE_SAPHYRE = registerGiftItem("ultimate_saphyre", SaphyreCommonConfigs.ULTIMATE_SAPHYRE_LOOT_TABLE, ParticlesInit.ULTIMATE_GIFT_PARTICLES);
 
 
-    private static RegistryObject<Item> registerGiftItem(String name, String lootTable, RegistryObject<SimpleParticleType> particle) {
-        SaphyreMain.LOGGER.debug("Loaded loot table for " + name + " : " + lootTable);
+    private static RegistryObject<Item> registerGiftItem(String name, ForgeConfigSpec.ConfigValue<String> lootTable, RegistryObject<SimpleParticleType> particle) {
         return ITEMS.register(name, () -> new GiftItem(
                 name,
                 lootTable,

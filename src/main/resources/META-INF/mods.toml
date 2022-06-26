@@ -1,5 +1,5 @@
 modLoader="javafml" #mandatory
-loaderVersion="[40,)"
+loaderVersion="[41,)"
 license="All rights reserved"
 issueTrackerURL="https://github.com/benjilebon/SaphyreMod/issues"
 [[mods]] #mandatory
@@ -22,5 +22,11 @@ description='The Saphyre'
     modId="geckolib3"
     mandatory=true
     versionRange="[3.1,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.saphyre]]
+    modId="forge"
+    mandatory=true
+    versionRange="[41.0.36,)"
     ordering="NONE"
     side="BOTH"

@@ -1,4 +1,4 @@
-package com.benjilebon.saphyre.world;
+package com.benjilebon.saphyre.world.features;
 
 import com.benjilebon.saphyre.init.BlockInit;
 import net.minecraft.core.Holder;

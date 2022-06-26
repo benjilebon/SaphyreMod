@@ -2,14 +2,14 @@ package com.benjilebon.saphyre;
 
 import com.benjilebon.saphyre.config.SaphyreClientConfigs;
 import com.benjilebon.saphyre.config.SaphyreCommonConfigs;
+import com.benjilebon.saphyre.events.init.CommonEvents;
 import com.benjilebon.saphyre.init.EntityInit;
 import com.benjilebon.saphyre.entity.client.SaphyreRenderer;
 import com.benjilebon.saphyre.init.BlockInit;
 import com.benjilebon.saphyre.init.ItemInit;
 import com.benjilebon.saphyre.init.ParticlesInit;
 import com.benjilebon.saphyre.world.SaphyreBiomeModifiers;
-import com.benjilebon.saphyre.world.SaphyreOreFeatures;
-import com.benjilebon.saphyre.world.SaphyrePlacedFeatures;
+import com.benjilebon.saphyre.world.features.SaphyrePlacedFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
@@ -26,7 +26,7 @@ import software.bernie.geckolib3.GeckoLib;
 
 // PORT TO 1.19 TODOs
 
-//TODO: Make it launch
+//TODO: Fix OreGen/Entity Configuration (waiting for changes on forge's side)
 //TODO: Fix Entity Spawning
 
 @Mod(SaphyreMetadata.MODID)
@@ -39,20 +39,21 @@ public class SaphyreMain
         LOGGER.info("Loading Saphyre");
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, SaphyreClientConfigs.SPEC, "saphyre-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, SaphyreCommonConfigs.SPEC, "saphyre-common.toml");
+
         ParticlesInit.PARTICLE_TYPES.register(bus);
         ItemInit.ITEMS.register(bus);
         BlockInit.register(bus);
         EntityInit.register(bus);
 
+        LOGGER.warn("Saphyre OreGen configuration is not working yet in this version, default values are being used."); //TODO: fix when possible
         SaphyreBiomeModifiers.register(bus);
         SaphyrePlacedFeatures.register(bus);
 
         bus.addListener(this::clientSetup);
 
         GeckoLib.initialize();
-
-        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, SaphyreClientConfigs.SPEC, "saphyre-client.toml");
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, SaphyreCommonConfigs.SPEC, "saphyre-common.toml");
 
         MinecraftForge.EVENT_BUS.register(this);
 
