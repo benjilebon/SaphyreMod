@@ -9,6 +9,7 @@ import com.benjilebon.saphyre.init.ItemInit;
 import com.benjilebon.saphyre.init.ParticlesInit;
 import com.benjilebon.saphyre.world.SaphyreBiomeModifiers;
 import com.benjilebon.saphyre.world.SaphyreOreFeatures;
+import com.benjilebon.saphyre.world.SaphyrePlacedFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
@@ -44,7 +45,7 @@ public class SaphyreMain
         EntityInit.register(bus);
 
         SaphyreBiomeModifiers.register(bus);
-        SaphyreOreFeatures.register(bus);
+        SaphyrePlacedFeatures.register(bus);
 
         bus.addListener(this::clientSetup);
 
