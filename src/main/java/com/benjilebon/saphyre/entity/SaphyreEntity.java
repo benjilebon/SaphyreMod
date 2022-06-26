@@ -8,6 +8,7 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
@@ -92,7 +93,7 @@ public class SaphyreEntity extends Animal implements IAnimatable {
         return this.factory;
     }
 
-    public static boolean canSpawn(EntityType<SaphyreEntity> entity, LevelAccessor level, MobSpawnType spawnType, BlockPos pos, Random random) {
+    public static boolean canSpawn(EntityType<SaphyreEntity> entity, LevelAccessor level, MobSpawnType spawnType, BlockPos pos, RandomSource random) {
         boolean willSpawn = checkAnimalSpawnRules(entity, level, spawnType, pos, random);
         if (willSpawn) {
             SaphyreMain.LOGGER.debug("Spawned Saphyre Entity at " + pos);

@@ -5,7 +5,6 @@ import com.benjilebon.saphyre.config.SaphyreClientConfigs;
 import net.minecraft.Util;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
@@ -47,7 +46,7 @@ public class GiftItem extends Item {
     @Override
     public void appendHoverText(ItemStack itemStack, Level level, List<Component> tooltipComponents, TooltipFlag isAdvanced)
     {
-        tooltipComponents.add(new TranslatableComponent("itemTooltip.saphyre.saphyre"));
+        tooltipComponents.add(Component.translatable("itemTooltip.saphyre.saphyre"));
         super.appendHoverText(itemStack, level, tooltipComponents, isAdvanced);
     }
 
@@ -70,7 +69,7 @@ public class GiftItem extends Item {
             );
 
             SaphyreMain.LOGGER.debug("Player " + player.getName().getContents() + " used " + this.itemName + " : got " + givenLoot);
-            player.sendMessage(formatSuccessChatMessage(givenLoot), Util.NIL_UUID);
+            player.sendSystemMessage(formatSuccessChatMessage(givenLoot));
             if (this.canGift(player, givenLoot)) {
                 player.addItem(givenLoot);
             } else {
@@ -103,7 +102,7 @@ public class GiftItem extends Item {
         }
     }
 
-    private TranslatableComponent formatSuccessChatMessage(ItemStack item) {
-        return new TranslatableComponent("message.gifting.item.success", item.getCount(), item.getDisplayName());
+    private Component formatSuccessChatMessage(ItemStack item) {
+        return Component.translatable("message.gifting.item.success", item.getCount(), item.getDisplayName());
     }
 }

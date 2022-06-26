@@ -7,6 +7,8 @@ import com.benjilebon.saphyre.entity.client.SaphyreRenderer;
 import com.benjilebon.saphyre.init.BlockInit;
 import com.benjilebon.saphyre.init.ItemInit;
 import com.benjilebon.saphyre.init.ParticlesInit;
+import com.benjilebon.saphyre.world.SaphyreBiomeModifiers;
+import com.benjilebon.saphyre.world.SaphyreOreFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTab;
@@ -21,7 +23,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import software.bernie.geckolib3.GeckoLib;
 
-//TODO: Story telling (i'm definitely not inspired)
+// PORT TO 1.19 TODOs
+
+//TODO: Make it launch
+//TODO: Fix Entity Spawning
 
 @Mod(SaphyreMetadata.MODID)
 public class SaphyreMain
@@ -34,9 +39,12 @@ public class SaphyreMain
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ParticlesInit.PARTICLE_TYPES.register(bus);
-        BlockInit.BLOCKS.register(bus);
         ItemInit.ITEMS.register(bus);
+        BlockInit.register(bus);
         EntityInit.register(bus);
+
+        SaphyreBiomeModifiers.register(bus);
+        SaphyreOreFeatures.register(bus);
 
         bus.addListener(this::clientSetup);
 

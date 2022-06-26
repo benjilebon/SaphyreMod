@@ -1,0 +1,5 @@
+{
+  "type": "saphyre:ores",
+  "biomes": "#minecraft:is_overworld",
+  "feature": "saphyre:saphyre_placed_ore"
+}

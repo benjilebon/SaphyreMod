@@ -15,12 +15,12 @@ description='The Saphyre'
 [[dependencies.saphyre]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18,1.18.2]"
+    versionRange="[1.19,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.saphyre]]
     modId="geckolib3"
     mandatory=true
-    versionRange="[3.0,)"
+    versionRange="[3.1,)"
     ordering="NONE"
     side="BOTH"
