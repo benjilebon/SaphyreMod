@@ -9,7 +9,7 @@ displayName="Saphyre"
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
 #logoFile="examplemod.png" #optional
-credits="Aze (benjilebon), Winigan & Elodias" #optional
+credits="Aze (benjilebon), Winigan & Elodias"
 authors="Aze (benjilebon), Winigan"
 description='The Saphyre'
 [[dependencies.saphyre]]

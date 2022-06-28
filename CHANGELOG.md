@@ -7,7 +7,7 @@ Each version has its own version that follows isolated versioning pattern with t
 When a version is ported to a new game release, it starts from the preceding version major.minor numbers
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
-## [1.0.1-119-FORGE] - UNRELEASED
+## [1.0.1-119-FORGE] - 28/06/2022
 
 ### Added
 
