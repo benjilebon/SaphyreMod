@@ -27,7 +27,6 @@ import software.bernie.geckolib3.GeckoLib;
 // PORT TO 1.19 TODOs
 
 //TODO: Fix OreGen/Entity Configuration (waiting for changes on forge's side)
-//TODO: Fix Entity Spawning
 
 @Mod(SaphyreMetadata.MODID)
 public class SaphyreMain

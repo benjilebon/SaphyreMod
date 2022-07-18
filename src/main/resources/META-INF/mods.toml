@@ -27,6 +27,6 @@ description='The Saphyre'
 [[dependencies.saphyre]]
     modId="forge"
     mandatory=true
-    versionRange="[41.0.36,)"
+    versionRange="[41.0.64,41.0.93]"
     ordering="NONE"
     side="BOTH"
