@@ -7,6 +7,13 @@ Each version has its own version that follows isolated versioning pattern with t
 When a version is ported to a new game release, it starts from the preceding version major.minor numbers
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+
+## [1.0.3-119-FORGE] - 26/11/2022
+
+### Fixed
+
+- Fixed startup crash for forge 41.0.94+
+
 ## [1.0.2-119-FORGE] - 28/06/2022
 
 ### Fixed 

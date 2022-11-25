@@ -12,7 +12,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class EntityInit {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
-            DeferredRegister.create(ForgeRegistries.ENTITIES, SaphyreMetadata.MODID);
+            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, SaphyreMetadata.MODID);
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
