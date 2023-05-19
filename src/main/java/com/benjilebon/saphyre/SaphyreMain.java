@@ -2,7 +2,6 @@ package com.benjilebon.saphyre;
 
 import com.benjilebon.saphyre.config.SaphyreClientConfigs;
 import com.benjilebon.saphyre.config.SaphyreCommonConfigs;
-import com.benjilebon.saphyre.events.init.CommonEvents;
 import com.benjilebon.saphyre.init.EntityInit;
 import com.benjilebon.saphyre.entity.client.SaphyreRenderer;
 import com.benjilebon.saphyre.init.BlockInit;
