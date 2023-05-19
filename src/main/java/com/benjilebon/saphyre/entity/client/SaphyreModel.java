@@ -19,12 +19,7 @@ public class SaphyreModel extends AnimatedGeoModel<SaphyreEntity> {
 
     @Override
     public ResourceLocation getAnimationResource(SaphyreEntity animatable) {
-        return  new ResourceLocation(SaphyreMetadata.MODID, "animations/saphyre.animation.json");
-    }
-
-    @Override
-    public void setLivingAnimations(SaphyreEntity entity, Integer uniqueID) {
-        super.setLivingAnimations(entity, uniqueID);
+        return new ResourceLocation(SaphyreMetadata.MODID, "animations/saphyre.animation.json");
     }
 
     @Override
