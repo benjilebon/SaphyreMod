@@ -2,11 +2,8 @@ package com.benjilebon.saphyre.world.features;
 
 import com.benjilebon.saphyre.SaphyreMetadata;
 import com.benjilebon.saphyre.config.SaphyreCommonConfigs;
-import com.benjilebon.saphyre.world.features.SaphyreOreFeatures;
-import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -26,11 +23,11 @@ public class SaphyrePlacedFeatures {
                             // using .get() crashes the game since configs are not loaded yet when registering placed features, so config cannot be used here anymore
                             // see https://github.com/MinecraftForge/MinecraftForge/pull/8236 and issue #7716 for that matter
 
-                            CountPlacement.of(SaphyreCommonConfigs.SAPHYRE_ORE_VEINS_PER_CHUNK.get()), // Number of veins in a chunk
+                            CountPlacement.of(SaphyreCommonConfigs.SAPHYRE_ORE_VEINS_PER_CHUNK.getDefault()), // Number of veins in a chunk
                             InSquarePlacement.spread(), // Veins distribution method
                             HeightRangePlacement.uniform(
-                                    VerticalAnchor.aboveBottom(SaphyreCommonConfigs.SAPHYRE_ORE_VEINS_MIN_HEIGHT.get()),
-                                    VerticalAnchor.aboveBottom(SaphyreCommonConfigs.SAPHYRE_ORE_VEINS_MAX_HEIGHT.get())
+                                    VerticalAnchor.aboveBottom(SaphyreCommonConfigs.SAPHYRE_ORE_VEINS_MIN_HEIGHT.getDefault()),
+                                    VerticalAnchor.aboveBottom(SaphyreCommonConfigs.SAPHYRE_ORE_VEINS_MAX_HEIGHT.getDefault())
                             ), // see where does aboveBottom starts
                             BiomeFilter.biome() // ?
                     ))
