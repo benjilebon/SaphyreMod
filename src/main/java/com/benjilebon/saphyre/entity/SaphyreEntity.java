@@ -32,8 +32,6 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 import software.bernie.geckolib3.util.GeckoLibUtil;
 
-import java.util.Random;
-
 public class SaphyreEntity extends Animal implements IAnimatable {
     private final AnimationFactory factory = GeckoLibUtil.createFactory(this);
     private static final EntityDataAccessor<Float> CURRENT_SPEED = SynchedEntityData.defineId(SaphyreEntity.class, EntityDataSerializers.FLOAT);
