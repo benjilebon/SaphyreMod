@@ -45,7 +45,7 @@ public final class ItemInit
     }
 
 
-    public static final RegistryObject<Item> RACCOON_SPAWN_EGG = ITEMS.register(
+    public static final RegistryObject<Item> SAPHYRE_SPAWN_EGG = ITEMS.register(
             "saphyre_spawn_egg",
             () -> new ForgeSpawnEggItem(
                     EntityInit.SAPHYRE_ENTITY,

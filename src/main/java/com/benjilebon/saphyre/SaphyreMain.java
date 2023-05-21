@@ -8,6 +8,7 @@ import com.benjilebon.saphyre.init.BlockInit;
 import com.benjilebon.saphyre.init.ItemInit;
 import com.benjilebon.saphyre.init.ParticlesInit;
 import com.benjilebon.saphyre.world.SaphyreBiomeModifiers;
+import com.benjilebon.saphyre.world.features.SaphyreOreFeatures;
 import com.benjilebon.saphyre.world.features.SaphyrePlacedFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -47,6 +48,7 @@ public class SaphyreMain
 
         LOGGER.warn("Saphyre OreGen configuration is not working yet in this version, default values are being used."); //TODO: fix when possible
         SaphyreBiomeModifiers.register(bus);
+        SaphyreOreFeatures.register(bus);
         SaphyrePlacedFeatures.register(bus);
 
         bus.addListener(this::clientSetup);

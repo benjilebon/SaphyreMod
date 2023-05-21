@@ -2,11 +2,8 @@ package com.benjilebon.saphyre.world.features;
 
 import com.benjilebon.saphyre.SaphyreMetadata;
 import com.benjilebon.saphyre.config.SaphyreCommonConfigs;
-import com.benjilebon.saphyre.world.features.SaphyreOreFeatures;
-import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -20,8 +17,8 @@ public class SaphyrePlacedFeatures {
 
     public static final RegistryObject<PlacedFeature> SAPHYRE_PLACED_ORE = PLACED_FEATURES.register(
             "saphyre_placed_ore",
-            () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>)
-                    SaphyreOreFeatures.SAPHYRE_FEATURE_ORE,
+            () -> new PlacedFeature(
+                    SaphyreOreFeatures.SAPHYRE_FEATURE_ORE.getHolder().get(),
                     List.of(
                             // using .get() crashes the game since configs are not loaded yet when registering placed features, so config cannot be used here anymore
                             // see https://github.com/MinecraftForge/MinecraftForge/pull/8236 and issue #7716 for that matter
